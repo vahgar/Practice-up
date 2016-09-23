@@ -19,18 +19,5 @@ public class node {
 		System.out.println("Either " +data+ " does not exist or no next element ");
 	}
 	
-	public static node delEl(int data, node head)
-	{
-		node temp = head;
-		while(temp!=null)
-		{
-			if(temp.next.data == data)
-			{
-				temp.next = temp.next.next;
-				return head;
-			}
-			temp = temp.next;
-		}
-		return head;
-	}
+	
 }

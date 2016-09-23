@@ -41,16 +41,31 @@ public class link_list {
 		System.out.println();
 	}
 	
-	public static void delEl(int data, node head) {
-		
+	public static node delEl(int data, node head)
+	{
+		node temp = head;
+		while(temp!=null)
+		{
+			if(temp.next.data == data)
+			{
+				temp.next = temp.next.next;
+				return head;
+			}
+			if(temp.data == data) {
+				temp = temp.next;
+				return temp;
+			}
+			temp = temp.next;
+		}
+		return head;
 	}
-	
 	
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		node head = takeInput();
 		printLL(head);
-		head.nextEl(3, head);
+		node new_head = delEl(5,head);
+		printLL(new_head);
 	
 	}
 
