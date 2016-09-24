@@ -60,12 +60,31 @@ public class link_list {
 		return head;
 	}
 	
+	public static node insertEnd(int data, node head)
+	{
+		node temp = head;
+		while(temp!=null)
+		{
+			if(temp.next==null)
+			{
+				node new_node = new node();
+				new_node.data = data;
+				temp.next = new_node;
+				return head;
+			}
+			temp = temp.next;
+		}
+		return head;
+	}
+	
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		node head = takeInput();
-		printLL(head);
-		node new_head = delEl(5,head);
-		printLL(new_head);
+//		printLL(head);
+//		node new_head = delEl(5,head);
+//		printLL(new_head);
+		node abc = insertEnd(5,head);
+		printLL(abc);
 	
 	}
 
