@@ -77,14 +77,31 @@ public class link_list {
 		return head;
 	}
 	
+	public static int lengthOfList(node head)
+	{
+		int length =0;
+		while(head!=null)
+		{
+			length++;
+			head=head.next;
+			
+		}
+		
+		System.out.println(length);
+		return length;
+	}
+	
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		node head = takeInput();
 //		printLL(head);
 //		node new_head = delEl(5,head);
 //		printLL(new_head);
-		node abc = insertEnd(5,head);
-		printLL(abc);
+//		node abc = insertEnd(5,head);
+//		printLL(abc);
+		
+		int length = lengthOfList(head);
+		
 	
 	}
 
